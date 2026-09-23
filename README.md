@@ -3,7 +3,7 @@ VideoTube is a backend project similar to YouTube, with an additional tweet feat
 
 I have implemented the following features:
 
-1. User (with Authentication)
+1. User (with Authentication): -
     Registration
     Login
     Logout
@@ -13,26 +13,26 @@ I have implemented the following features:
    Change password
    Get current user
    Change avatar and cover image
-2. Video
+2. Video:-
    Upload video
    Delete video
    Update video details
    Get my videos
    Change thumbnail
-3. Subscription
+3. Subscription:-
    Subscribe/unsubscribe to any channel using channel ID
-4. Tweet
+4. Tweet:-
    Create a tweet
    Edit a tweet
    Delete a tweet
-5. Comments
+5. Comments:-
    Comment on videos
    Comment on tweets
    Edit or delete comments
-6. Like
+6. Like:-
    Like videos or tweets
    Get total like count
-7. Playlist
+8. Playlist:-
    Create playlist
    Delete playlist
    Update playlist details
