@@ -2,7 +2,7 @@ import {asyncHandler} from "../utils/asyncHandler.js"
 import {ApiError} from "../utils/ApiError.js"
 
 import {User} from "../models/user.model.js"
-import {subscription} from "../models/subcriptions.model.js"
+import {Subscription} from "../models/subcriptions.model.js"
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 
@@ -332,7 +332,7 @@ const getUserChannelProfile = asyncHandler(async(req,res)=>{
             },
             {
                 $lookup:{
-                    from:"subscription",
+                    from:"subscriptions",
                     localField:"_id",
                     foreignField: "channel",
                     as:"subscribers"
@@ -340,7 +340,7 @@ const getUserChannelProfile = asyncHandler(async(req,res)=>{
             },
             {
                 $lookup:{
-                    from:"subscription",
+                    from:"subscriptions",
                     localField:"_id",
                     foreignField:"subscriber",
                     as :"subscriberedTo"
@@ -368,7 +368,7 @@ const getUserChannelProfile = asyncHandler(async(req,res)=>{
                     fullname:1,
                     username:1,
                     subscribersCount:1,
-                    channelsSubsribedToCount:1,
+                    channelsSubscribedToCount:1,
                     isSubscribed:1,
                     coverImage:1,
                     email:1
